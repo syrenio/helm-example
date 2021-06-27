@@ -1,0 +1,15 @@
+namespace:
+  name: staging
+
+deployment:
+  replicas: 1
+  container:
+    image: nginx
+    tag: 1.18.0
+    requests:
+      memory: 128Mi
+      cpu: 50m
+  pullPolicy: IfNotPresent
+
+configMap:
+  data: "version: 1.18.0"

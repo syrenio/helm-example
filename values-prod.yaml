@@ -1,0 +1,18 @@
+namespace:
+  name: prod
+
+deployment:
+  replicas: 3
+  container:
+    image: nginx
+    tag: 1.17.0
+    requests:
+      memory: 256Mi
+      cpu: 70m
+
+service:
+  port: 80
+  type: ClusterIP
+
+configMap:
+  data: "version: 1.17.0"
