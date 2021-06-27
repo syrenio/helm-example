@@ -27,7 +27,7 @@ spec:
       - image: {{ .Values.deployment.container.image }}:{{ .Values.deployment.container.tag }}
         imagePullPolicy: {{ .Values.deployment.pullPolicy}}
         name: {{ .Values.deployment.container.name}}
-        resouces:
+        resources:
           requests: 
             memory: {{ .Values.deployment.container.requests.memory }}
             cpu: {{ .Values.deployment.container.requests.cpu }}
